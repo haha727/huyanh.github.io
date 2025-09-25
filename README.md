@@ -9,7 +9,8 @@
 </head>
 <body>
   <header>
-    <h1>Hello, world!</h1>
+    <nav>    <h1>Hello, viewer! check out<a href="web/homepage.html"> my web page<a/></h1></nav>
+
   </header>
   <nav class="nav" id="nav">
     <a href="#home">Logo</a>
