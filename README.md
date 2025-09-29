@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <nav>    <h1>Hello, viewer! check out<a href="web/homepage.html"> my web page<a/></h1></nav>
+    <nav>    <h1>Hello, viewer! check out<a href="web/homepage.html"> my web page.<a/></h1></nav>
 
   </header>
 
