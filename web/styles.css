@@ -1,25 +1,299 @@
-.flex-container {
+#toggleCursorBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#target {
+  width: auto;
+  height: auto;
+  position:relative;
+} 
+#arrow {
+  position: fixed;
+  font-size: 30px;
+  color: black;
+  transform-origin: center center;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.05s linear; /* optional: smoother rotation */
+}
+/*hidden mode*/
+body.hide-arrow {
+  cursor: default;
+}
+
+body.hide-arrow #arrow {
+  display: none;
+}
+.bee-cursor {
+  cursor: url('bee2.png') 16 16, auto;
+}
+:root {
+  --main-bg: #90fca9;
+  --text-color: #000;
+  --link-color: #0645ad;
+  --link-hover: #042e7d;
+  --section-bg: #e9fbe9;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+header, nav, main, footer {
+  padding: 1rem;
+}
+
+header {
+  background-color: var(--main-bg);
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  background: #000;
+  color: #fff;
+  z-index: 100;
+}
+
+nav {
+  background-color: var(--section-bg);
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+}
+
+nav h2 {
+  font-size: 1.2rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin-bottom: 0.5rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+.content-section {
+  margin-bottom: 2rem;
+}
+
+.highlight-section {
+  background-color: var(--main-bg);
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.top-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.bee-image {
+  width: 50px;
+  height: auto;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .container {
     display: flex;
-    background-color: black;
-    justify-content: flex-start;
+  }
+
+  nav {
+    flex: 0 0 200px;
+  }
+
+  main {
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  #arrow {
+    position: fixed;
+    font-size: 30px;
+    color: black;
+    transform-origin: center center;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.05s linear; /* optional: smoother rotation */
+  }
+  #target {
+    width: auto;
+    height: auto;
+    position: relative;
+  } 
+#toggleCursorBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/*hidden mode*/
+body.hide-arrow {
+  cursor: default;
+}
+
+body.hide-arrow #arrow {
+  display: none;
+}
+.bee-cursor {
+  cursor: url('bee2.png') 8 8, auto;
+}
+  :root {
+    --main-bg: #90fca9;
+    --text-color: #000;
+    --link-color: #0645ad;
+    --link-hover: #042e7d;
+    --section-bg: #e9fbe9;
   }
   
-  .flex-container > nav > div {
-    background-color: rgb(0, 102, 255);
-    margin: 30px;
-    padding: 20px;
-    font-size: 30px;
-  }
-.flex-container-bottom
-{
-    display: flex;
-    background-color: black;
-    justify-content: flex-end;
-  }
-  .flex-container-bottom> nav > div {
-    background-color: rgb(0, 102, 255);
-    margin: 30px;
-    padding: 20px;
-    font-size: 30px;
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
 
   }
+  
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+  
+  a:hover,
+  a:focus {
+    color: var(--link-hover);
+    text-decoration: underline;
+  }
+  
+  header, nav, main, footer {
+    padding: 1rem;
+  }
+  
+  header {
+    background-color: var(--main-bg);
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  
+  nav {
+    background-color: var(--section-bg);
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    
+  }
+  
+  nav h2 {
+    font-size: 1.2rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-bottom: 0.5rem;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  .content-section {
+    margin-bottom: 2rem;
+  }
+  
+  .highlight-section {
+    background-color: var(--main-bg);
+    padding: 1rem;
+    font-weight: bold;
+  }
+  
+  .top-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .bee-image {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+  }
+  
+  @media (min-width: 786px) {
+    .container {
+      display: flex;
+      height: auto ;
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    nav {
+      flex: 0 0 200px;
+      width: max-content;
+    }
+  
+    main {
+      flex: 1;
+    }
+  }}
