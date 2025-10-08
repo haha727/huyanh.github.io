@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bee Interest Page</title>
+  <script src="homepage.js"></script>
+  <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body >
+
+<header role="banner">
+<h1>&#128029 Welcome to My Page of Interest &#128029</h1>
+</header>
+
+<div class="container">
+<nav aria-label="Main navigation">
+  <h2>Quick Navigation</h2>
+  <ul>
+    <li><a href="homepage.html">Introduction</a></li>
+    <li><a  href="likes.html">Likes</a></li>
+    <li><a href="reason.html">Reason</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+  </ul>
+</nav>
+
+<main id="main">
+  <form action="https://www.hh3dlab.fi/formdemo/formhandler.php"   method="post">
+    <div class="highlight-section" aria-label="Extra Information">
+    <table border=2px>
+        <tr>
+            <td><label for="First name">First name</label></td>
+            <td><input type="text" id="First name" name="First name"></td>
+        </tr>
+        <tr>
+            <td><label for="Last name">Last name</label></td>
+            <td><input type="text" id="Last name" name="Last name"></td>
+        </tr>
+    <tr>
+        <td><label for="feedback">Your feedback:</label></td>
+        <td><textarea rows="5" cols="40" id="feedback" name="feedback"></textarea></td>
+    </tr>
+    <tr>
+        <td><label for="rating:">was it interesting?</label></td>
+        <td>
+          <input type="radio" id="great" name="rating[]" value="great">
+            <label for="great">great</label> <br>
+            <input type="radio" id="ok" name="rating[]" value="ok">
+            <label for="ok">ok</label> <br>
+            <input type="radio" id="bad" name="rating[]" value="bad">
+            <label for="bad">bad</label><br>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="1">
+            <label for="submit">submit</label></td>
+        <td><input type="submit" id="submit" value="submit">
+     </td>
+</tr>
+    </table> </div>  
+ </form>
+
+
+
+  <button class="top-button" value="button" onclick="uptop()">
+    Instantly go to the top of page
+  </button>
+  <button id="toggleCursorBtn">🐝 tranform into Bee Cursor</button>
+  <button id="toggleArrowBtn">🔽 Hide bee Arrow & bee cursor</button>
+</main>
+</div>
+<div id="arrow"><img src="bee2.png"></div>
+<footer role="contentinfo" style="text-align: center; padding: 1rem;">
+<p> 2025 Bee Enthusiast Page</p>
+</footer>
+</body>
+</html>
+
+
+
