@@ -27,7 +27,7 @@ body.hide-arrow #arrow {
 }
 .bee-cursor {
   cursor: url('bee2.png') 16 16, auto;
-  alt: "Girl in a jacket";
+  alt: "bee";
 }
 :root {
   --main-bg: #90fca9;
@@ -299,3 +299,4 @@ body.hide-arrow #arrow {
     }
 
   }}
+
